@@ -1,0 +1,24 @@
+I am trying to create histogram and correlation coefficient between two random values x and Y 
+The code will be
+
+set.seed(123) 
+# for reproducibility
+x <- 1:20
+y <- rnorm(20) 
+# generate 20 random variables
+data <- data.frame(x, y)
+# create a data frame
+# Load the generated data
+data <- data.frame(x = 1:20, y = rnorm(20))
+
+# Plot histograms for X and Y
+par(mfrow = c(1, 2))
+hist(data$x, main = "Histogram of X")
+hist(data$y, main = "Histogram of Y")
+
+# Calculate and display the correlation coefficient between X and Y
+cor.coef <- cor(data$x, data$y)
+cat("The correlation coefficient between X and Y is", round(cor.coef, 2))
+
+##The required output
+
